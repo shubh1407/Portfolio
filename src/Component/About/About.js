@@ -1,7 +1,7 @@
 import React from 'react';
 import './About.css';
 import aboutImg from '../Home/img/profile.jpg';
-
+import pdfFile from '../About/shubham-resume.pdf';
 function About() {
     window.addEventListener("scroll", function(){
         const upToTop = document.querySelector("a.bottom__to__top");
@@ -38,7 +38,7 @@ function About() {
                                 We, <b>InnovTeam</b> always believe <i>"One Innovative Idea can change life of thousands."</i> and always trying to implement new ideas using latest technologies.
                             </p>
                             <div className="about__button d__flex align__items__center">
-                            <a href='./shubham-resume.pdf' download="shubham.pdf">
+                            <a href={pdfFile} download="shubham.pdf">
                   <button className="about btn pointer">Download Cv</button>
                 </a>
                 <a href="#Contact">
