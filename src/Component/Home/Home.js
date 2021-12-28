@@ -2,16 +2,21 @@ import React, { useState } from 'react';
 import './Home.css';
 import logo from './img/InnovTeam-logos.jpeg';
 import Typical from 'react-typical';
+import Particles from "react-tsparticles";
 
 function Home() {
-
+    const [show, setShow] = useState(false);
     window.addEventListener("scroll", function () {
         const header = document.querySelector(".header");
-        header.classList.toggle("active", window.scrollY > 0)
+        header.classList.toggle("active", window.scrollY > 0);
+        const sideNavbar = document.querySelector(".sideNavbar");
+        sideNavbar.classList.toggle("inactive", setShow(!show))
     });
-    const [show, setShow] = useState(true);
+    
     return (
+
         <div id="Home" className='home'>
+            
             <div className='home__bg'>
                 <div className='header d__flex align__items__center'>
                     <div className='logo'>
@@ -23,12 +28,11 @@ function Home() {
                             <a href='#About'><li className='nav__items mx__15'>About</li></a>
                             <a href='#Resume'><li className='nav__items mx__15'>Resume</li></a>
                             <a href='#Skills'><li className='nav__items mx__15'>Skills</li></a>
-                            {/* <a href='#Members'><li className='nav__items mx__15'>Members</li></a> */}
                             <a href='#Contact'><li className='nav__items mx__15'>Contact</li></a>
 
                         </ul>
                     </div>
-                    <div className="toggle__menu">
+                    <div id="toggle__menu" className="toggle__menu">
                         <svg onClick={() => setShow(!show)}
                             xmlns="http://www.w3.org/2000/svg"
                             width="16"
@@ -56,11 +60,8 @@ function Home() {
                                     <a href="#Resume">Resume</a>
                                 </li>
                                 <li className="sideNavbar">
-                                     <a href="#Skills">Skills</a>
+                                    <a href="#Skills">Skills</a>
                                 </li>
-                                {/* <li className="sideNavbar">
-                                    <a href="#Members">Members</a>
-                                </li> */}
                                 <li className="sideNavbar">
                                     <a href="#Contact">Contact</a>
                                 </li>
@@ -76,7 +77,10 @@ function Home() {
                                 WELCOME TO  INNOVTEAM WORLD
                             </h1>
                             <h2 className='home__text pz__10'>
-                                Hi, I'm Shubham Agarwal
+                                Hi  <span className="wave" role="img" aria-labelledby="wave">
+                                👋🏻
+                                </span><br />
+                                 I'm Shubham Agarwal
                             </h2>
                             <h3 className='home__text sweet'>
                                 <Typical

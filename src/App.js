@@ -5,7 +5,6 @@ import Footer from './Component/Footer/Footer';
 import Home from './Component/Home/Home';
 import Resume from './Component/Resume/Resume';
 import Skills from './Component/Skills/Skills';
-
 function App() {
   return (
     <div className="App">

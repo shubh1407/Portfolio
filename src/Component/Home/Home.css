@@ -34,6 +34,17 @@ li.nav__items{
     padding-bottom: 15px;
 }
 
+li.sideNavbar{
+    color: burlywood!important;
+    font-family: cursive;
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.sideNavbar.inactive{
+    display: none;
+}
+
 .home__content{
     padding:200px 0px;
 }
@@ -189,15 +200,39 @@ p.styles_typicalWrapper__1_Uvh {
     font-family: Montserrat,sans-serif;
 }
 }
-.s-hero__content-social {
-    display: -ms-inline-flexbox;
-    display: -webkit-inline-box;
-    display: inline-flex;
-    -ms-flex-flow: row wrap;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-    flex-flow: row wrap;
-    font-size: 2.6rem;
-    line-height: 1;
-    margin-top: var(--vspace-0_5);
-}
+
+.wave {
+    animation-name: wave-animation; /* Refers to the name of your @keyframes element below */
+    animation-duration: 2.1s; /* Change to speed up or slow down */
+    animation-iteration-count: infinite; /* Never stop waving :) */
+    transform-origin: 70% 70%; /* Pivot around the bottom-left palm */
+    display: inline-block;
+    font-weight: 100!important;
+    font-size: 40px;
+  }
+  @keyframes wave-animation {
+    0% {
+      transform: rotate(0deg);
+    }
+    10% {
+      transform: rotate(14deg);
+    } /* The following five values can be played with to make the waving more or less extreme */
+    20% {
+      transform: rotate(-8deg);
+    }
+    30% {
+      transform: rotate(14deg);
+    }
+    40% {
+      transform: rotate(-4deg);
+    }
+    50% {
+      transform: rotate(10deg);
+    }
+    60% {
+      transform: rotate(0deg);
+    } /* Reset for the last half to pause */
+    100% {
+      transform: rotate(0deg);
+    }
+  }
