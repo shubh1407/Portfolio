@@ -1,0 +1,24 @@
+.ex-me{
+    margin-top: 35px;
+  }
+
+#Resume{
+    background-color: white;
+    color: black;
+}
+h3.mb-4{
+    background-color: white;
+    color: black;
+    font-weight: 700;
+}
+
+h5.mb-1{
+    background-color: white;
+    color: black;
+    font-weight: 700;
+}
+
+h1.text-primary{
+    font-size: x-large!important;
+    font-weight: bold   ;
+}
